@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.entgra.facility.monitor</groupId>
+    <artifactId>product-facility-monitor</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>components/alert-mgt</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <testng.version>7.4.0</testng.version>
+        <mokito.version>4.11.0</mokito.version>
+        <carbon.kernel.version>4.8.1</carbon.kernel.version>
+        <org.wso2.carbon.logging.version>4.4.9</org.wso2.carbon.logging.version>
+        <pax.logging.api.version>1.11.2</pax.logging.api.version>
+
+        <!-- Axis2 -->
+        <axis2.orbit.version>1.6.1-wso2v85</axis2.orbit.version>
+
+        <!-- Testing -->
+        <junit.version>4.13.1</junit.version>
+        <!--Eclipse OSGi-->
+        <eclipse.equinox.services.version>3.3.100.v20120522-1822</eclipse.equinox.services.version>
+        <eclipse.osgi.version>3.8.1.v20120830-144521</eclipse.osgi.version>
+
+        <!-- Carbon Identity -->
+        <carbon.identity.framework.version>5.24.8</carbon.identity.framework.version>
+
+        <!-- Carbon Device Management -->
+        <io.entgra.device.mgt.core.version>7.0.7</io.entgra.device.mgt.core.version>
+        <io.entgra.device.mgt.core.version.range>[7.0.0, 8.0.0)</io.entgra.device.mgt.core.version.range>
+
+        <!-- Factory Management -->
+        <io.entgra.proprietary.digital.factory.version>1.2.0-SNAPSHOT</io.entgra.proprietary.digital.factory.version>
+        <io.entgra.proprietary.digital.factory.version.range>[1.2.0-SNAPSHOT, 2.0.0)</io.entgra.proprietary.digital.factory.version.range>
+
+        <!-- Carbon Commons -->
+        <version.commons.codec>1.4.0.wso2v1</version.commons.codec>
+        <commons-codec.wso2.osgi.version.range>[1.4.0,2.0.0)</commons-codec.wso2.osgi.version.range>
+
+        <!--CXF properties-->
+        <cxf.version>3.5.5</cxf.version>
+
+        <commons-io.version>2.4.0.wso2v1</commons-io.version>
+        <commons-collections.version>3.2.0.wso2v1</commons-collections.version>
+        <commons.logging.version>1.2</commons.logging.version>
+        <commons.httpclient.version>3.1.0.wso2v2</commons.httpclient.version>
+
+        <cxf-bundle-package.version>2.7.18</cxf-bundle-package.version>
+
+        <google.gson.version>2.9.1</google.gson.version>
+
+        <guava.version>32.1.3-jre</guava.version>
+
+        <imp.package.version.osgi.framework>[1.6.0, 2.0.0)</imp.package.version.osgi.framework>
+        <imp.package.version.osgi.service>[1.2.0,1.3.0)</imp.package.version.osgi.service>
+
+        <hibernate-validator.version>5.1.2.Final</hibernate-validator.version>
+
+        <httpclient.version>4.3.1.wso2v2</httpclient.version>
+
+        <jaxb.api.version>2.3.1</jaxb.api.version>
+
+        <json.version>20220924</json.version>
+
+        <jsr311.version>1.1.1</jsr311.version>
+
+        <javax.xml.bind.imp.pkg.version>[0.0.0,1.0.0)</javax.xml.bind.imp.pkg.version>
+
+        <orbit.version.h2.engine>1.2.140.wso2v3</orbit.version.h2.engine>
+        <orbit.h2.version>2.1.214.wso2v1</orbit.h2.version>
+
+        <securevault.version>1.1.3</securevault.version>
+
+        <spring-web.version>5.3.23</spring-web.version>
+
+        <velocity.version>2.3</velocity.version>
+
+        <xerces.version>2.8.1.wso2v2</xerces.version>
+
+        <!-- Neethi version-->
+        <neethi.version>3.1.1</neethi.version>
+        <neethi.wso2.version>2.0.4.wso2v4</neethi.wso2.version>
+
+        <!--SC Annotations Dependency -->
+        <commons.pool.wso2.version>1.5.6.wso2v1</commons.pool.wso2.version>
+
+        <!--javax ws rs version-->
+        <javax.ws.rs.version>2.0.1</javax.ws.rs.version>
+        <swagger.version>1.6.9</swagger.version>
+        <swagger.annotations.version>1.6.9</swagger.annotations.version>
+        <swagger.annotations.version.range>[1.6.0, 2.0.0)</swagger.annotations.version.range>
+        <servlet-api.version>4.0.1</servlet-api.version>
+
+        <!--JWT grant type extension feature-->
+        <jackson-annotations.version>2.9.8.wso2v1</jackson-annotations.version>
+
+        <fasterxml.jackson.databind.version>2.14.1</fasterxml.jackson.databind.version>
+
+        <!--Oltu client Version-->
+        <commons.codec.verision>1.9</commons.codec.verision>
+
+        <!-- jacoco plugin version -->
+        <jacoco.maven.plugin.version>0.8.10</jacoco.maven.plugin.version>
+        <apache.felix.scr.ds.annotations.version>1.2.4</apache.felix.scr.ds.annotations.version>
+
+        <javax.xml.parsers.import.pkg.version>[0.0.0,1.0.0)</javax.xml.parsers.import.pkg.version>
+
+        <quartz.version>2.1.1.wso2v1</quartz.version>
+        <javax-cache-api.version>1.1.1</javax-cache-api.version>
+        <apache.http.client.version>4.5.6</apache.http.client.version>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <io.entgra.alert.mgt.version>1.0.0-SNAPSHOT</io.entgra.alert.mgt.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Factory Management dependencies -->
+            <dependency>
+                <groupId>io.entgra.alert.mgt</groupId>
+                <artifactId>io.entgra.alert.mgt.common</artifactId>
+                <version>${io.entgra.alert.mgt.version}</version>
+            </dependency>
+
+            <!--  End of Factory Management dependencies  -->
+
+            <!-- Device Management dependencies -->
+            <dependency>
+                <groupId>io.entgra.device.mgt.core</groupId>
+                <artifactId>io.entgra.device.mgt.core.device.mgt.core</artifactId>
+                <version>${io.entgra.device.mgt.core.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.entgra.device.mgt.core</groupId>
+                        <artifactId>io.entgra.device.mgt.core.device.mgt.common</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.utils</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.base</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.user.core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.user.api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.registry.api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.registry.core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.tomcat.wso2</groupId>
+                        <artifactId>jdbc-pool</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon.governance</groupId>
+                        <artifactId>org.wso2.carbon.governance.api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.axis2.transport</groupId>
+                        <artifactId>axis2-transport-mail</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.ws.commons.axiom</groupId>
+                        <artifactId>axiom-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.ws.commons.axiom</groupId>
+                        <artifactId>axiom-impl</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.ws.commons.axiom.wso2</groupId>
+                        <artifactId>axiom</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon.identity</groupId>
+                        <artifactId>org.wso2.carbon.identity.oauth.stub</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.axis2.wso2</groupId>
+                        <artifactId>axis2</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.ndatasource.core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.tomcat</groupId>
+                        <artifactId>tomcat</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.tomcat</groupId>
+                        <artifactId>tomcat-servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.eclipse.osgi</groupId>
+                        <artifactId>org.eclipse.osgi</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>io.entgra.device.mgt.core</groupId>
+                <artifactId>io.entgra.device.mgt.core.device.mgt.common</artifactId>
+                <version>${io.entgra.device.mgt.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.entgra.device.mgt.core</groupId>
+                <artifactId>io.entgra.device.mgt.core.task.mgt.common</artifactId>
+                <version>${io.entgra.device.mgt.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.entgra.device.mgt.core</groupId>
+                <artifactId>io.entgra.device.mgt.core.apimgt.annotations</artifactId>
+                <version>${io.entgra.device.mgt.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.entgra.device.mgt.core</groupId>
+                <artifactId>io.entgra.device.mgt.core.identity.jwt.client.extension</artifactId>
+                <version>${io.entgra.device.mgt.core.version}</version>
+            </dependency>
+            <!-- Device Management dependencies -->
+
+            <!-- Governance dependencies -->
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.registry.api</artifactId>
+                <version>${carbon.kernel.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.wso2.carbon.identity</groupId>
+                        <artifactId>org.wso2.carbon.user.mgt.stub</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon.identity</groupId>
+                        <artifactId>org.wso2.carbon.user.mgt</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- End of Governance dependencies -->
+
+            <!-- OSGi dependencies-->
+            <dependency>
+                <groupId>org.eclipse.osgi</groupId>
+                <artifactId>org.eclipse.osgi</artifactId>
+                <version>${eclipse.osgi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.osgi</groupId>
+                <artifactId>org.eclipse.osgi.services</artifactId>
+                <version>${eclipse.equinox.services.version}</version>
+            </dependency>
+            <!-- End of OSGi dependencies -->
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-inline</artifactId>
+                <version>${mokito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <!-- Carbon Kernel dependencies -->
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.utils</artifactId>
+                <version>${carbon.kernel.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.bouncycastle.wso2</groupId>
+                        <artifactId>bcprov-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.base</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.axis2.wso2</groupId>
+                        <artifactId>axis2</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.igniterealtime.smack.wso2</groupId>
+                        <artifactId>smack</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.igniterealtime.smack.wso2</groupId>
+                        <artifactId>smackx</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jaxen</groupId>
+                        <artifactId>jaxen</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-fileupload.wso2</groupId>
+                        <artifactId>commons-fileupload</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.ant.wso2</groupId>
+                        <artifactId>ant</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.eclipse.equinox</groupId>
+                        <artifactId>javax.servlet</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-httpclient.wso2</groupId>
+                        <artifactId>commons-httpclient</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.registry.api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.user.api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>xerces.wso2</groupId>
+                        <artifactId>xercesImpl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.ndatasource.core</artifactId>
+                <version>${carbon.kernel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.ndatasource.rdbms</artifactId>
+                <version>${carbon.kernel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.user.core</artifactId>
+                <version>${carbon.kernel.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.felix</groupId>
+                        <artifactId>javax.servlet</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>javax.cache.wso2</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-dbcp.wso2</groupId>
+                        <artifactId>commons-dbcp</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.carbon</groupId>
+                        <artifactId>org.wso2.carbon.ndatasource.rdbms</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wso2.securevault</groupId>
+                        <artifactId>org.wso2.securevault</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-collections.wso2</groupId>
+                        <artifactId>commons-collections</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>xerces.wso2</groupId>
+                        <artifactId>xercesImpl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.logging</artifactId>
+                <version>${org.wso2.carbon.logging.version}</version>
+            </dependency>
+            <!-- End of Carbon Kernel dependencies -->
+
+            <!-- Orbit dependencies -->
+            <dependency>
+                <groupId>org.wso2.orbit.com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${orbit.h2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wso2.securevault</groupId>
+                <artifactId>org.wso2.securevault</artifactId>
+                <version>${securevault.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xerces.wso2</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xerces.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.queuing</artifactId>
+                <version>${carbon.kernel.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb.api.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.axis2.wso2</groupId>
+                <artifactId>axis2</artifactId>
+                <version>${axis2.orbit.version}</version>
+            </dependency>
+            <!-- End of Orbit dependencies -->
+
+            <!-- Carbon Identity dependencies -->
+            <dependency>
+                <groupId>org.wso2.carbon.identity.framework</groupId>
+                <artifactId>org.wso2.carbon.user.mgt</artifactId>
+                <version>${carbon.identity.framework.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>log4j-over-slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.framework</groupId>
+                <artifactId>org.wso2.carbon.identity.base</artifactId>
+                <version>${carbon.identity.framework.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.powermock</groupId>
+                        <artifactId>powermock-api-mockito</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.powermock</groupId>
+                        <artifactId>powermock-module-testng</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- End of Carbon Identity dependencies -->
+
+            <!-- CXF dependencies -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                <version>${cxf.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>xml-resolver</groupId>
+                        <artifactId>xml-resolver</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>asm</groupId>
+                        <artifactId>asm</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-bindings-xml</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-frontend-simple</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-ws-addr</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+                <version>${cxf.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.ws.rs</groupId>
+                        <artifactId>jsr311-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>jsr311-api</artifactId>
+                <version>${jsr311.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>${javax.ws.rs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons.logging.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-bindings-soap</artifactId>
+                <version>${cxf.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-databinding-jaxb</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-extension-providers</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-ws-security</artifactId>
+                <version>${cxf.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>net.sf.ehcache</groupId>
+                        <artifactId>ehcache-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.ws.security</groupId>
+                        <artifactId>wss4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- End of CXF dependencies -->
+
+            <dependency>
+                <groupId>commons-codec.wso2</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${version.commons.codec}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${google.gson.version}</version>
+            </dependency>
+
+            <!-- Removing neethi configs from webapp-->
+            <dependency>
+                <groupId>org.apache.neethi.wso2</groupId>
+                <artifactId>neethi</artifactId>
+                <version>${neethi.wso2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.neethi</groupId>
+                <artifactId>neethi</artifactId>
+                <version>${neethi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons.codec.verision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-pool.wso2</groupId>
+                <artifactId>commons-pool</artifactId>
+                <version>${commons.pool.wso2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-httpclient.wso2</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>${commons.httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io.wso2</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections.wso2</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>6.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!--Mysql Connector version-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-core</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-jaxrs</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${javax-cache-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${fasterxml.jackson.databind.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-annotations</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring-web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-bundle-jaxrs</artifactId>
+                <version>${cxf-bundle-package.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
+                <version>${apache.felix.scr.ds.annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.quartz-scheduler.wso2</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${apache.http.client.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <repositories>
+        <!-- Before adding ANYTHING in here, please start a discussion on the dev list.
+             Ideally the Axis2 build should only use Maven central (which is available
+             by default) and nothing else. We had troubles with other repositories in
+             the past. Therefore configuring additional repositories here should be
+             considered very carefully. -->
+        <repository>
+            <id>internal.nexus</id>
+            <name>Entgra Internal Repository</name>
+            <url>https://nexus-local.entgra.io/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>entgra.nexus</id>
+            <name>Entgra Public Repository</name>
+            <url>https://nexus.entgra.io/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>entgra.proprietary</id>
+            <name>Entgra Proprietary Repository</name>
+            <url>https://nexus.entgra.io/repository/maven-proprietary/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>wso2-nexus</id>
+            <name>WSO2 Public Repository</name>
+            <url>https://maven.wso2.org/nexus/content/groups/wso2-public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+    </repositories>
+</project>
