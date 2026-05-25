@@ -1,0 +1,51 @@
+<!DOCTYPE assembly [
+        <!ELEMENT assembly (id|formats|includeBaseDirectory|fileSets|dependencySets|files)*>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT formats (format)*>
+        <!ELEMENT format (#PCDATA)>
+        <!ELEMENT includeBaseDirectory (#PCDATA)>
+        <!ELEMENT fileSets (fileSet)*>
+        <!ELEMENT fileSet (directory|outputDirectory|excludes|includes|fileMode|filtered)*>
+        <!ELEMENT directory (#PCDATA)>
+        <!ELEMENT outputDirectory (#PCDATA)>
+        <!ELEMENT excludes (exclude)*>
+        <!ELEMENT exclude (#PCDATA)>
+        <!ELEMENT includes (include)*>
+        <!ELEMENT include (#PCDATA)>
+        <!ELEMENT fileMode (#PCDATA)>
+        <!ELEMENT filtered (#PCDATA)>
+        <!ELEMENT dependencySets (dependencySet)*>
+        <!ELEMENT dependencySet (outputDirectory|includes)*>
+        <!ELEMENT files (file)*>
+        <!ELEMENT file (source|outputDirectory|fileMode|filtered|destName)*>
+        <!ELEMENT source (#PCDATA)>
+        <!ELEMENT destName (#PCDATA)>
+        ]>
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>../../p2-profile/smart-grid-p2-profile/target/${entgra-iot-pro}</directory>
+            <outputDirectory>${entgra-facility-monitor}</outputDirectory>
+            <excludes>
+                <exclude>**/api#device-mgt#v1.0.war</exclude>
+                <exclude>**/api#device-mgt-config#v1.0.war</exclude>
+                <exclude>**/api#device-mgt#sim#v1.0.war</exclude>
+                <exclude>**/api#grafana-mgt#v1.0.war</exclude>
+                <exclude>**/ui-request-handler.war</exclude>
+                <exclude>**/entgra-ui-request-handler.war</exclude>
+                <exclude>**/sim.xml</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>src/resources</directory>
+            <outputDirectory>${entgra-smart-grid}</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+</assembly>
