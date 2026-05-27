@@ -24,12 +24,12 @@
 
 
 <bean id="swaggerConfig" class="io.swagger.jaxrs.config.BeanConfig">
-<property name="resourcePackage" value="io.entgra.proprietary.digital.factory.mgt.api"/>
+<property name="resourcePackage" value="io.entgra.proprietary.alert.mgt.api"/>
 <property name="version" value="1.0"/>
 <property name="host" value="localhost:9443"/>
 <property name="schemes" value="https" />
-<property name="basePath" value="/api/factory-mgt/v1.0"/>
-<property name="title" value="Factory Management Service API Definitions"/>
+<property name="basePath" value="/api/alert-mgt/v1.0"/>
+<property name="title" value="Alert Management Service API Definitions"/>
 <property name="contact" value="dev@entgra.io"/>
 <property name="license" value="Apache 2.0"/>
 <property name="licenseUrl" value="http://www.apache.org/licenses/LICENSE-2.0.html"/>

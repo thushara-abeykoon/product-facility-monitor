@@ -1,0 +1,6 @@
+instructions.configure = \
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/io.entgra.alert.mgt_${feature.version}/webapps/api#alert-mgt#v1.0.war,target:${installFolder}/../../../repository/deployment/server/webapps/api#alert-mgt#v1.0.war,overwrite:true);\
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../features/io.entgra.alert.mgt_${feature.version}/conf/alert-config.xml,target:${installFolder}/../../../repository/conf/alert-config.xml,overwrite:true);\
+
+instructions.unconfigure = \
+org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/../../../repository/deployment/server/webapps/api#alert-mgt#v1.0.war);\

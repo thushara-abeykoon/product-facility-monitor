@@ -4,19 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.entgra.facility.monitor</groupId>
+        <groupId>io.entgra.proprietary</groupId>
         <artifactId>product-facility-monitor</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <groupId>io.entgra.alert.mgt</groupId>
     <artifactId>alert-mgt</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>io.entgra.alert.mgt.api</module>
-        <module>io.entgra.alert.mgt.common</module>
-        <module>io.entgra.alert.mgt.core</module>
+        <module>io.entgra.proprietary.alert.mgt.api</module>
+        <module>io.entgra.proprietary.alert.mgt.common</module>
+        <module>io.entgra.proprietary.alert.mgt.core</module>
     </modules>
 
     <properties>
