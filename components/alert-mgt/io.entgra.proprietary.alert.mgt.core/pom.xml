@@ -52,12 +52,8 @@
                         <Bundle-Description>Alert Management Core</Bundle-Description>
                         <Private-Package>io.entgra.proprietary.alert.mgt.core.internal</Private-Package>
                         <Import-Package>
-                            io.entgra.proprietary.alert.mgt.common;version="${io.entgra.proprietary.alert.mgt.version}",
-                            io.entgra.proprietary.alert.mgt.common.spi;version="${io.entgra.proprietary.alert.mgt.version}",
-                            io.entgra.proprietary.alert.mgt.common.exception;version="${io.entgra.proprietary.alert.mgt.version}",
-                            io.entgra.proprietary.alert.mgt.common.beans;version="${io.entgra.proprietary.alert.mgt.version}",
+                            io.entgra.proprietary.alert.mgt.common.*,
                             org.osgi.service.component;version="${imp.package.version.osgi.service}",
-
                             org.apache.commons.lang;version="[2.6,3)",
                             org.apache.commons.logging;version="[1.2,2)",
                         </Import-Package>
@@ -73,8 +69,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.entgra.alert.mgt</groupId>
-            <artifactId>io.entgra.alert.mgt.common</artifactId>
+            <groupId>io.entgra.proprietary</groupId>
+            <artifactId>io.entgra.proprietary.alert.mgt.common</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>commons-logging</groupId>

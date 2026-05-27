@@ -30,7 +30,7 @@
 
     <fileSets>
         <fileSet>
-            <directory>../../p2-profile/smart-grid-p2-profile/target/${entgra-iot-pro}</directory>
+            <directory>../../p2-profile/facility-monitor-p2-profile/target/${entgra-iot-pro}</directory>
             <outputDirectory>${entgra-facility-monitor}</outputDirectory>
             <excludes>
                 <exclude>**/api#device-mgt#v1.0.war</exclude>
@@ -44,7 +44,7 @@
         </fileSet>
         <fileSet>
             <directory>src/resources</directory>
-            <outputDirectory>${entgra-smart-grid}</outputDirectory>
+            <outputDirectory>${entgra-facility-monitor}</outputDirectory>
         </fileSet>
     </fileSets>
 

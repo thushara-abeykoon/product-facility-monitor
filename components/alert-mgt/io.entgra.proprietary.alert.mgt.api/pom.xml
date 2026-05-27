@@ -103,8 +103,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.entgra.alert.mgt</groupId>
-            <artifactId>io.entgra.alert.mgt.common</artifactId>
+            <groupId>io.entgra.proprietary</groupId>
+            <artifactId>io.entgra.proprietary.alert.mgt.common</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

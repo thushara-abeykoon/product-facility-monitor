@@ -14,13 +14,12 @@
     <jaxrs:providers>
         <ref bean="jsonProvider"/>
         <ref bean="swaggerWriter"/>
-        <ref bean="globalExceptionMapper"/>
     </jaxrs:providers>
 </jaxrs:server>
 
 <bean id="swaggerWriter" class="io.swagger.jaxrs.listing.SwaggerSerializers" />
 <bean id="swaggerResource" class="io.swagger.jaxrs.listing.ApiListingResource" />
-<bean id="validationInterceptor" class="io.entgra.alert.mgt.api.addons.ValidationInterceptor"/>
+<bean id="ValidationInterceptor" class="io.entgra.proprietary.alert.mgt.api.addons.ValidationInterceptor"/>
 
 
 <bean id="swaggerConfig" class="io.swagger.jaxrs.config.BeanConfig">
@@ -36,8 +35,8 @@
 <property name="scan" value="true"/>
 </bean>
 
-<bean id="alertMgtApiServiceImpl" class="io.entgra.alert.mgt.api.service.impl.AlertApiServiceImpl"/>
-<bean id="jsonProvider" class="io.entgra.alert.mgt.api.addons.GsonMessageBodyHandler"/>
+<bean id="alertMgtApiServiceImpl" class="io.entgra.proprietary.alert.mgt.api.service.impl.AlertApiServiceImpl"/>
+<bean id="jsonProvider" class="io.entgra.proprietary.alert.mgt.api.addons.GsonMessageBodyHandler"/>
 
 
 <cxf:bus>

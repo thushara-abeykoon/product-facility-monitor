@@ -10,12 +10,14 @@
     <packaging>pom</packaging>
     <modules>
         <module>components/alert-mgt</module>
-        <module>distribution/entgra-facility-monitor</module>
         <module>features/alert-mgt-feature</module>
         <module>p2-profile/facility-monitor-p2-profile</module>
+        <module>distribution/entgra-facility-monitor</module>
     </modules>
 
     <properties>
+        <entgra-facility-monitor-version>1.0.0-SNAPSHOT</entgra-facility-monitor-version>
+        <entgra-facility-monitor>entgra-facility-monitor-${entgra-facility-monitor-version}</entgra-facility-monitor>
         <entgra-iot-pro-version>6.1.0.0</entgra-iot-pro-version>
         <entgra-iot-pro>entgra-iots-pro-${entgra-iot-pro-version}</entgra-iot-pro>
         <carbon.p2.plugin.version>5.1.2</carbon.p2.plugin.version>
@@ -132,8 +134,8 @@
         <dependencies>
             <!-- Factory Management dependencies -->
             <dependency>
-                <groupId>io.entgra.alert.mgt</groupId>
-                <artifactId>io.entgra.alert.mgt.common</artifactId>
+                <groupId>io.entgra.proprietary</groupId>
+                <artifactId>io.entgra.proprietary.alert.mgt.common</artifactId>
                 <version>${io.entgra.proprietary.alert.mgt.version}</version>
             </dependency>
 

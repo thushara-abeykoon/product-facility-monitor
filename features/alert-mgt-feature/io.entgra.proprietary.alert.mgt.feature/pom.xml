@@ -64,7 +64,7 @@
                                     <version>${project.version}</version>
                                     <type>war</type>
                                     <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/maven-shared-archive-resources/webapps/
+                                    <outputDirectory>${project.basedir}/src/main/resources/webapps/
                                     </outputDirectory>
                                     <destFileName>api#alert-mgt#v1.0.war</destFileName>
                                 </artifactItem>
